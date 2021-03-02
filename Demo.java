@@ -1,17 +1,18 @@
-package org.trainingDay4;
+package org.trainingDay8;
 
-public class Demo 
+public class Demo extends Thread
 {
-	public static void main(String[] args)
+	@Override
+	public void run()
 	{
-		try
-		{
-		int data = 100/0;
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
+		this.walk();
 	}
-}
+	public void walk()
+	{
+		String name = "Gowtham";
+		int speed = 34;
+		System.out.println("Gowtham walks at a speed of "+" "+speed);;
 		
+	}
+
+}

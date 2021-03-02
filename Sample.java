@@ -1,25 +1,26 @@
-package org.training;
+package org.trainingDay8;
 
-public class Sample 
+public class Sample extends Thread
 {
-	static double pi = 3.14;
-	int a;
-	int b;
+	int a ;
+	int b ;
 	public Sample()
 	{
-		this.a = 34;
-		this.b = 56;
-	}
-	public void method()
-	{
-		int v = 99;
-		double k = this.a*this.b*pi;
-		System.out.println(v*k);
+		this.a = 38;
+		this.b = 23;
 		
 	}
-	public void method2()
+	@Override
+	public void run()
 	{
-		System.out.println(a*b+pi);
+		int c = a*b;
+		System.out.println("The speed of Running"+" "+c);
+		this.move();
 	}
+	public void move()
+	{
+		System.out.println("move");
+	}
+	
 
 }

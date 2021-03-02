@@ -1,31 +1,25 @@
-package org.trainingDay4;
+package org.trainingDay8;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Demo1 
 {
-
 	public static void main(String[] args) 
 	{
-		try
+		File f1 = new File("D:/FileStorage");
+		boolean data = f1.mkdir();
+		File f2 = new File("D:/FileStorage/Data.txt");
+		try 
 		{
-		int[] a = new int[5];
-		a[0] = 23;
-		a[1] = 34;
-		a[2] = 45;
-		a[3] = 56;
-		a[4] = 78;
-		System.out.println(a[10]);
+			f2.createNewFile();
 		}
-		catch(ArithmeticException e)
+		catch (IOException e) 
 		{
-			System.out.println("Exceptoin Occurs");
+			
+			e.printStackTrace();
 		}
-		catch(ArrayIndexOutOfBoundsException e)
-		{
-			System.out.println("Index bound Exception occurs");
-		}
-		catch(Exception e)
-		{
-			System.out.println("Parent Exception Occurs");
-		}
+		
 	}
+
 }
