@@ -1,26 +1,26 @@
-package org.trainingDay8;
+package org.trainingDay5;
 
-public class Sample extends Thread
+import java.util.Vector;
+
+public class Sample 
 {
-	int a ;
-	int b ;
-	public Sample()
+	public static void main(String[] args) 
 	{
-		this.a = 38;
-		this.b = 23;
+		Vector<Object> v1 = new Vector<Object>();
+		v1.add(98);
+		v1.add(45);
+		v1.add(33);
+		v1.add(24);
+		v1.add(21);
+		//System.out.println(v1);
+		
+		for(int i=0;i<=v1.size()-1;i++)
+		{
+			Object o1 = v1.get(i);
+			Integer i1 = (Integer)o1;
+			System.out.println(i1);
+		}
 		
 	}
-	@Override
-	public void run()
-	{
-		int c = a*b;
-		System.out.println("The speed of Running"+" "+c);
-		this.move();
-	}
-	public void move()
-	{
-		System.out.println("move");
-	}
-	
 
 }
